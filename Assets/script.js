@@ -6,11 +6,6 @@ let humidityEl = document.getElementById("humidity");
 let windEl = document.getElementById("wind");
 let forecastDiv = document.getElementById("forecast");
 let weatherDashboard = document.getElementById("city");
-let cardIcon = document.querySelector(".card-icon");
-let cardTemp = document.querySelector(".card-temp");
-let cardHumidity = document.querySelector(".card-humidity");
-let cardWind = document.querySelector(".card-wind");
-let cardDate = document.querySelector(".card-date");
 let month = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 let dateCall = new Date();
 let date = month[dateCall.getMonth()] + "/" + dateCall.getDate() + "/" + dateCall.getFullYear();
@@ -37,13 +32,13 @@ function weatherFunction(city){
     let currentWeather = function(current){
         let weatherIcon = document.createElement("img");
             weatherIcon.src = "./Assets/icons/" + current.data[0].weather.icon + ".png";
-        let city = document.getElementById("city");
-        city.textContent=current.data[0].city + "" + date;
+        let cityName = document.getElementById("cityname");
+        cityName.textContent=current.data[0].city_name + "" + date;
 
         tempEl.textContent = current.data[0].temp + "°F";
         humidityEl.textContent = current.data[0].rh + "%";
         windEl.textContent = current.data[0].wind_spd + "MPH";
-        city.appendChild(weatherIcon);
+        cityName.appendChild(weatherIcon);
     }
 
     let forecastweatherAPI = 
