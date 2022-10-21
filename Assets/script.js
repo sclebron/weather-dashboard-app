@@ -36,7 +36,7 @@ function weatherFunction(city){
 
     let currentWeather = function(current){
         let weatherIcon = document.createElement("img");
-            weatherIcon.src = "./assets/icons/" + current.data[0].weather.icon + ".png";
+            weatherIcon.src = ".Assets/icons/" + current.data[0].weather.icon + ".png";
         let city = document.getElementById("city");
         city.textContent=current.data[0].city + "" + date;
 
