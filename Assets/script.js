@@ -54,21 +54,21 @@ function weatherFunction(city){
         console.log(data);
     });
 
-    let forecastWeather = function(forecast) {
-        for (let i=1; i<6; i++) {
-            let icon = document.getElementById("icon"+[i]);
-            let cardTitle = document.getElementById("date"+[i]);
-            let forecastTemp = document.getElementById("temperature"+[i]);
-            let forecastHumidity = document.getElementById("humidity"+[i]);
-            let forecastWind = document.getElementById("wind"+[i]);
+//     let forecastWeather = function(forecast) {
+//         for (let i=1; i<6; i++) {
+//             let icon = document.getElementById("icon"+[i]);
+//             let cardTitle = document.getElementById("date"+[i]);
+//             let forecastTemp = document.getElementById("temperature"+[i]);
+//             let forecastHumidity = document.getElementById("humidity"+[i]);
+//             let forecastWind = document.getElementById("wind"+[i]);
 
-            cardTitle.textContent = "Forecast:" + forecast.data[i].valid_date;
-            forecastTemp.textContent = "Temperature:" + forecast.data[i].temp + "°F";
-            forecastHumidity.textContent = "Humidity:" + forecast.data[i].rh + "%";
-            forecastWind.textContent = "Wind:" + forecast.data[i].wind_spd + "MPH";
-        }
-    }
-}
+//             cardTitle.textContent = "Forecast:" + forecast.data[i].valid_date;
+//             forecastTemp.textContent = "Temperature:" + forecast.data[i].temp + "°F";
+//             forecastHumidity.textContent = "Humidity:" + forecast.data[i].rh + "%";
+//             forecastWind.textContent = "Wind:" + forecast.data[i].wind_spd + "MPH";
+//         }
+//     }
+// }
 
 searchBtn.addEventListener('click', function() {
     let city = cityInput.value;
