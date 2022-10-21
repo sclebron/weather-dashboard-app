@@ -69,6 +69,7 @@ function weatherFunction(city){
 //         }
 //     }
 // }
+}
 
 searchBtn.addEventListener('click', function() {
     let city = cityInput.value;
